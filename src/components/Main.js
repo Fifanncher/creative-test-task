@@ -3,18 +3,16 @@ import {Link} from 'react-router-dom';
 
 const Main = () => (
   <div style={{textAlign: 'center'}}>
-    <ul>
-      <li>
-        <Link to={'/game'}>
-          {`1. Игра "Память"`}
-        </Link>
-      </li>
-      <li>
-        <Link to={'/flats'}>
-          {'2. Небольшое приложение на фреймворке'}
-        </Link>
-      </li>
-    </ul>
+    <div>
+      <Link to={'/game'}>
+        <h1>{`1. Игра "Память"`}</h1>
+      </Link>
+    </div>
+    <div>
+      <Link to={'/flats'}>
+        <h1>{'2. Небольшое приложение на фреймворке'}</h1>
+      </Link>
+    </div>
   </div>
 );
 
