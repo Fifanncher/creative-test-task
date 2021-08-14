@@ -1,18 +1,18 @@
 .image{
-    max-height: 200px;
-    object-fit: contain !important;
+  max-height: 200px;
+  object-fit: contain !important;
 }
 
 .content{
-    display: flex;
-    flex-direction: column;
-    line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
 }
 
 .icon{
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .inFavorite{
-    color: #fc0014;
+  color: red;
 }
