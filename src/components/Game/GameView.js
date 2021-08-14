@@ -64,7 +64,6 @@ class GameView extends Component {
           {!gameIsStarted && (
             <Button
               onClick={startGame}
-              className={s.startButton}
               variant='contained'
               color='secondary'
             >
