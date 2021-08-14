@@ -1,0 +1,58 @@
+.wrapper {
+  margin: 50px auto;
+  width: 50vw;
+}
+
+.startButton {
+  background: #0eba00;
+}
+
+.container {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  grid-auto-rows: 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.openedCard {
+  border: 2px solid #128701;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.cardClosed {
+  cursor: pointer;
+  background: #c8e8c6;
+}
+
+.imgCard {
+  width: 100%;
+  height: 100%;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.time {
+  font-size: 20px;
+}
