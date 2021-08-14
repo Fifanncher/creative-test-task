@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import s from './Game.module.css';
-import {Button} from '@material-ui/core';
 import cardsImg from './cards';
 import {inject} from 'mobx-react';
 import classNames from 'classnames';
-import Time from './Time';
 import PropTypes from 'prop-types';
+import Toolbar from './Toolbar';
 
 @inject(({GameStore}) => {
   return {
@@ -14,7 +13,6 @@ import PropTypes from 'prop-types';
     deletedCards: GameStore.deletedCards,
     cards: GameStore.cards,
     gameIsStarted: GameStore.gameIsStarted,
-    startGame: GameStore.startGame,
     results: GameStore.results
   };
 })
@@ -26,7 +24,6 @@ class GameView extends Component {
       deletedCards,
       cards,
       gameIsStarted,
-      startGame,
       results
     } = this.props;
 
@@ -59,18 +56,7 @@ class GameView extends Component {
 
     return (
       <div className={s.wrapper}>
-        <div className={s.toolbar}>
-          <Time />
-          {!gameIsStarted && (
-            <Button
-              onClick={startGame}
-              variant='contained'
-              color='secondary'
-            >
-              {'Старт'}
-            </Button>
-          )}
-        </div>
+        <Toolbar />
         <div className={s.container}>{cardsBlock}</div>
         <div className={s.results}>
           {'Результаты'}
@@ -89,7 +75,6 @@ GameView.propTypes = {
   deletedCards: PropTypes.object,
   cards: PropTypes.array,
   gameIsStarted: PropTypes.bool,
-  startGame: PropTypes.func,
   results: PropTypes.array
 };
 
