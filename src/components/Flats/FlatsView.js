@@ -12,6 +12,14 @@ import PropTypes from 'prop-types';
 })
 
 class FlatsView extends React.Component {
+  componentDidMount() {
+    document.body.style.backgroundColor = 'antiquewhite';
+  }
+
+  componentWillUnmount() {
+    document.body.style.backgroundColor = null;
+  }
+
   render() {
     const {
       objects,
